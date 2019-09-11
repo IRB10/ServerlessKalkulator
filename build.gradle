@@ -86,7 +86,6 @@ task deployFunction(type: AWSLambdaMigrateFunctionTask, dependsOn: [assemble, te
 }
 
 task invokeFunction(type: AWSLambdaInvokeTask) {
-//    functionName = project.name
     functionName = "aws-lambda-kotlin-number-reverse"
     invocationType = InvocationType.RequestResponse
     payload = file("src/main/resources/sample_request.json")
